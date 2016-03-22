@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wingspan</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="./app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <a href="index.html" class="navbar-brand">wingspan</a>
+            </nav>
+            <div id="app" class="container-fuid">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputOrigin" class="col-sm-3 control-label">Origin</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputOrigin">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDest" class="col-sm-3 control-label">Destination</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputDest">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDepartDate" class="col-sm-3 control-label">Departing</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputDepartDate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-4">
+                            <button type="submit" class="btn btn-primary btn-block">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
