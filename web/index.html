@@ -3,12 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Wingspan</title>
+        <link rel="stylesheet" href="bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="./app.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!--<script src="bower_components/angular/angular.js"></script>
+        <script src="./app.js"></script>-->
+        <script>
+            $('#inputDepartDate').datepicker();
+        </script>
     </head>
     <body>
         <div class="container">
@@ -32,13 +37,23 @@
                     <div class="form-group">
                         <label for="inputDepartDate" class="col-sm-3 control-label">Departing</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputDepartDate">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputDepartDate">
+                                <label for="date-picker-2" class="input-group-addon btn">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputReturnDate" class="col-sm-3 control-label">Departing</label>
+                        <label for="inputReturnDate" class="col-sm-3 control-label">Returning</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputReturnDate">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputReturnDate">
+                                <label for="inputReturnDate" class="input-group-addon btn">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
