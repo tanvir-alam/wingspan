@@ -1,14 +1,19 @@
-// module.exports = function(app) {
+(function () {
+  'use strict';
+  var express = require('express');
+  var app = express();
 
-//   app.get('/api/v1/cities', function(req,res) {
-//     sabreCall('/v1/lists/supported/cities', res);
-//   });
+  require('./config/app_config')(app);
+  require('./routes')(app);
 
-//   app.get('/api/v1/places', function(req,res) {
-//     sabreCall('/v1/shop/flights/fares?origin=' + req.query.origin +
-//     '&departuredate=' + req.query.departuredate +
-//     '&returndate=' + req.query.returndate +
-//     '&maxfare=' + req.query.maxfare, res);
-//   });
-// };
+  // START THE SERVER
+  console.log('STARTING THE SABRE SERVER');
+  console.log('-------------------------');
+  app.listen(3000);
+  console.log('Started the server');
+  process.on('uncaughtException', function (error) {
+      console.log(error.stack);
+      console.log(error);
+  });
 
+})();
