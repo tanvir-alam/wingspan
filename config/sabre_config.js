@@ -1,5 +1,5 @@
 var sabreDevStudio = require('sabre-dev-studio');
-var sabreDevStudio = new sabreDevStudio({
+var sabre = new sabreDevStudio({
   client_id:     'V1:en9q4agampnnihdz:DEVCENTER:EXT',
   client_secret: 'H9tjv9YR',
   uri:           'https://api.test.sabre.com'
@@ -7,7 +7,7 @@ var sabreDevStudio = new sabreDevStudio({
 var options = {};
 
 function sabreCall(q, res) {
-  sabreDevStudio.get(q, options, function(err, data) {
+  sabre.get(q, options, function(err, data) {
     response(res, err, data);
   });
 }
