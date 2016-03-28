@@ -1,4 +1,4 @@
-var path = require('path');
+var express = require('express');
 var sabreDevStudio = require('sabre-dev-studio');
 var sabreConfig = require('./config/sabre_config');
 var sabre = new sabreDevStudio(sabreConfig);
@@ -28,9 +28,7 @@ function response(res, err, data) {
 
 module.exports = function(app) {
     
-    app.get('/', function(req, res) {
-        res.sendFile(path.join(__dirname, 'web', 'index.html'));
-    });
+    app.use(express.static(__dirname + '/web'));
     
     app.get('/api/v1/cities', function(req,res) {
         sabreCall('/v1/lists/supported/cities', res);
