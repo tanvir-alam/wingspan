@@ -1,3 +1,4 @@
+var path = require('path');
 var sabreDevStudio = require('sabre-dev-studio');
 var sabreConfig = require('./config/sabre_config');
 var sabre = new sabreDevStudio(sabreConfig);
@@ -26,15 +27,19 @@ function response(res, err, data) {
 }
 
 module.exports = function(app) {
+    
+    app.get('/', function(req, res) {
+        res.sendFile(path.join(__dirname, 'web', 'index.html'));
+    });
+    
+    app.get('/api/v1/cities', function(req,res) {
+        sabreCall('/v1/lists/supported/cities', res);
+    });
 
-  app.get('/api/v1/cities', function(req,res) {
-    sabreCall('/v1/lists/supported/cities', res);
-  });
-
-  app.get('/api/v1/places', function(req,res) {
-    sabreCall('/v1/shop/flights/fares?origin=' + req.query.origin +
-    '&departuredate=' + req.query.departuredate +
-    '&returndate=' + req.query.returndate +
-    '&maxfare=' + req.query.maxfare, res);
-  });
+    app.get('/api/v1/places', function(req,res) {
+        sabreCall('/v1/shop/flights/fares?origin=' + req.query.origin +
+        '&departuredate=' + req.query.departuredate +
+        '&returndate=' + req.query.returndate +
+        '&maxfare=' + req.query.maxfare, res);
+    });
 };

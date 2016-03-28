@@ -7,7 +7,7 @@
   require('./routes')(app);
 
   // START THE SERVER
-  console.log('STARTING THE SABRE SERVER');
+  console.log('STARTING THE WINGSPAN SERVER');
   console.log('-------------------------');
   app.listen(3000);
   console.log('Started the server');
