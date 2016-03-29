@@ -7,10 +7,10 @@
 }
 
 .suggestions-list {
-    position: absolute;
     list-style-type: none;
-    padding: 0;
-    overflow: auto;
+    position: absolute;
+    padding: 5px 0;
+    overflow-y: auto;
     z-index: 5000;
 }
 
@@ -18,4 +18,5 @@
     color: #000000;
     background-color: #f9f9f9;
     padding-left: 15px;
+    line-height: 25px;
 }
