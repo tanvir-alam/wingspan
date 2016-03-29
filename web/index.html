@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/jquery-ui/jquery-ui.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -20,48 +21,50 @@
             <nav class="navbar navbar-default">
                 <a href="index.html" class="navbar-brand">wingspan</a>
             </nav>
-            <div id="app" class="container-fluid">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="inputOrigin" class="col-sm-3 control-label">Origin</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputOrigin">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDest" class="col-sm-3 control-label">Destination</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="inputDest">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDepartDate" class="col-sm-3 control-label">Departing</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="inputDepartDate">
-                                <label for="date-picker-2" class="input-group-addon btn">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </label>
+            <div class="container-fluid">
+                <div id="app" class="col-sm-offset-4 col-sm-4">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputOrigin" class="col-sm-4 control-label">Origin</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="inputOrigin">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputReturnDate" class="col-sm-3 control-label">Returning</label>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="inputReturnDate">
-                                <label for="inputReturnDate" class="input-group-addon btn">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </label>
+                        <div class="form-group">
+                            <label for="inputDest" class="col-sm-4 control-label">Destination</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="inputDest">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-4 col-sm-4">
-                            <button type="submit" class="btn btn-primary btn-block">Search</button>
+                        <div class="form-group">
+                            <label for="inputDepartDate" class="col-sm-4 control-label">Departing</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="inputDepartDate">
+                                    <label for="date-picker-2" class="input-group-addon btn">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label for="inputReturnDate" class="col-sm-4 control-label">Returning</label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="inputReturnDate">
+                                    <label for="inputReturnDate" class="input-group-addon btn">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-6 col-sm-6">
+                                <button type="submit" class="btn btn-primary btn-block">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
