@@ -5,3 +5,17 @@
   display: flex;
   align-items: center;
 }
+
+.suggestions-list {
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    overflow: auto;
+    z-index: 5000;
+}
+
+.suggestions-list li {
+    color: #000000;
+    background-color: #f9f9f9;
+    padding-left: 15px;
+}
