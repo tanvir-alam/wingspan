@@ -1,3 +1,4 @@
+var express = require('express');
 var sabreDevStudio = require('sabre-dev-studio');
 var sabreConfig = require('./config/sabre_config');
 var sabre = new sabreDevStudio(sabreConfig);
