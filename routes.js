@@ -46,6 +46,10 @@ module.exports = function(app) {
     
     app.use('/', express.static(__dirname + '/web'));
     
+    app.get('/v1/lists/supported/shop/flights/origins-destinations', function(req, res) {
+        sabreCall('/v1/lists/supported/shop/flights/origins-destinations', res);
+    });
+    
     app.get('/v1/shop/flights', function(req, res) {
        sabreCall('v1/shop/flights?origin=JFK' 
        + '&destination=LAX'

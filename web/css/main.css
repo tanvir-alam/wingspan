@@ -16,7 +16,12 @@
 
 .suggestions-list li {
     color: #000000;
-    background-color: #f9f9f9;
+    background-color: #ddd;
     padding-left: 15px;
     line-height: 25px;
+}
+
+.suggestions-list li:hover {
+    background-color: #aaa;
+    cursor: pointer;
 }

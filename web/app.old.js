@@ -1,17 +1,10 @@
 angular.module('wingspan', []).
 controller('MainCtrl', function($rootScope, $scope, $http) {
-    var cityPairs;
-    var originList = [];
     
-    // get all the Origin Locations
-    $http.get('/v1/lists/supported/shop/flights/origins-destinations').success(function(data) {
-        cityPairs = (JSON.parse(data.info)).OriginDestinationLocations;
-        for (var i = 0; i < cityPairs.length; i++) {
-            if (originList.indexOf(cityPairs[i].OriginLocation) < 0) {
-                originList.push(cityPairs[i].OriginLocation);
-                console.log(originList[i]);
-            }
-        }
+    // Get the cities data that I can show in the drop-down
+    $http.get('/api/v1/cities').success(function(data) {
+        $scope.cities = (JSON.parse(data.info)).Cities;
+        console.log($scope.cities);
     }).error(function(err) {
         $scope.error = err;
     });
@@ -22,12 +15,12 @@ controller('MainCtrl', function($rootScope, $scope, $http) {
     $scope.search = function() {
         $scope.suggestions = [];
         var maxListLength = 5;
-        for(var i = 0; i < originList.length; i++) {
-            var cityName = angular.lowercase(originList[i].CityName);
-            var airportCode = angular.lowercase(originList[i].AirportCode);
+        for(var i = 0; i < $scope.cities.length; i++) {
+            var cityName = angular.lowercase($scope.cities[i].name);
+            var cityCode = angular.lowercase($scope.cities[i].code);
             var searchText = angular.lowercase($scope.searchText);
-            if (cityName.indexOf(searchText) === 0 || airportCode.indexOf(searchText) === 0) {
-                $scope.suggestions.push(originList[i].CityName + ' (' + originList[i].AirportCode +')');
+            if (cityName.indexOf(searchText) === 0 || cityCode.indexOf(searchText) === 0) {
+                $scope.suggestions.push($scope.cities[i].name + ' (' + $scope.cities[i].code +')');
                 maxListLength--;
                 if (maxListLength <= 0) {
                     break;
