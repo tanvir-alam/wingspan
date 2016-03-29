@@ -3,3 +3,5 @@ module.exports = {
   client_secret: 'H9tjv9YR',
   uri:           'https://api.test.sabre.com'
 }
+
+var credentials = 'VmpFNlpXNDVjVFJoWjJGdGNHNXVhV2hrZWpwRVJWWkRSVTVVUlZJNlJWaFU6U0RsMGFuWTVXVkk9';
