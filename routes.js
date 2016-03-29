@@ -28,7 +28,7 @@ function response(res, err, data) {
   }
 }
 
-module.exports = function() {
+module.exports = function(app) {
     
     app.post('/v2/auth/token', function(req, res) {
         var opt = {
