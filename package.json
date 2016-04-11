@@ -10,14 +10,15 @@
     "http-post": "~0.1.1",
     "memory-cache": "0.0.5",
     "method-override": "latest",
+    "mongodb": "^2.1.16",
     "morgan": "latest",
     "mstring": "^0.1.2",
     "multer": "^0.1.0",
+    "sabre-dev-studio": "^1.0.1",
     "serve-favicon": "latest",
     "string": "~1.8.0",
     "underscore": "latest",
-    "validator": "^3.19.1",
-    "sabre-dev-studio": "^1.0.1"
+    "validator": "^3.19.1"
   },
   "name": "wingspan",
   "subdomain": "wingspan",
